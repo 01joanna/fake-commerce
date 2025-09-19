@@ -10,6 +10,7 @@ export async function fetchProducts(): Promise<Product[]> {
             throw new Error(`Response status: ${response.status}`)
         }
         const data: Product[] = await response.json()
+        console.log(data)
         return data
     }
     catch (error) {
