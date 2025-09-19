@@ -24,8 +24,7 @@ function App() {
   return (
     <div>
       <Search value={search} onChange={setSearch} />
-      <p className=''>Productos</p>
-      <div className='flex'>
+      <div className='grid grid-cols-4 grid-rows-4'>
         {products.map((product: Product) => (
           <Card key={product.id} product={product} />
         ))}

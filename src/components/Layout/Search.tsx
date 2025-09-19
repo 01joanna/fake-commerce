@@ -11,7 +11,7 @@ export default function Search({value, onChange}: SearchProps) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Buscar producto"
-        className=""
+        className="border border-black rounded w-[700px] p-2 m-3"
         />
     )
 }
