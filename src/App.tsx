@@ -14,13 +14,17 @@ function App() {
     }
 
     loadProducts()
+    console.log(products)
   }, [])
 
 
   return (
     <div>
+      <p>hola</p>
       {products.map((prod: Product) => (
-        <div key={prod.id}>{prod.title}</div>
+        <div key={prod.id}>
+          <h2>{prod.title}</h2>
+        </div>
       ))}
     </div>
   )
