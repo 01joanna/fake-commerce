@@ -1,6 +1,7 @@
 import type { Product } from './models/Product'
 import { fetchProducts } from './api/products'
 import React, { useState, useEffect } from 'react';
+import { Card } from './components/Card/Card';
 
 
 function App() {
@@ -20,12 +21,12 @@ function App() {
 
   return (
     <div>
-      <p>hola</p>
-      {products.map((prod: Product) => (
-        <div key={prod.id}>
-          <h2>{prod.title}</h2>
-        </div>
-      ))}
+      <p className=''>Productos</p>
+      <div className='flex'>
+        {products.map((product: Product) => (
+          <Card key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   )
 }
