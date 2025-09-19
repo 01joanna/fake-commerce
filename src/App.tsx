@@ -17,10 +17,8 @@ function App() {
     }
 
     loadProducts()
-    console.log(products)
   }, [])
-
-
+  
   return (
     <div>
       <Search value={search} onChange={setSearch} />
