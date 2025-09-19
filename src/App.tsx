@@ -2,7 +2,7 @@ import type { Product } from './models/Product'
 import { fetchProducts } from './api/products'
 import React, { useState, useEffect } from 'react';
 import { Card } from './components/Card/Card';
-import Search from './components/Search/Search';
+import Search from './components/Layout/Search';
 
 
 function App() {
@@ -17,15 +17,12 @@ function App() {
     }
 
     loadProducts()
-    console.log(products)
   }, [])
-
-
+  
   return (
     <div>
       <Search value={search} onChange={setSearch} />
-      <p className=''>Productos</p>
-      <div className='grid grid-cols-4 grid-rows-3'>
+      <div className='grid grid-cols-4 grid-rows-4'>
         {products.map((product: Product) => (
           <Card key={product.id} product={product} />
         ))}
