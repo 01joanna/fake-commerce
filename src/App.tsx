@@ -11,12 +11,10 @@ function App() {
   const [search, setSearch] = useState<string>("")
 
   useEffect(() => {
-    async function loadProducts(): Promise<void> {
-      const data: Product[] = await fetchProducts()
-      setProducts(data)
-    }
+    fetchProducts()
+    .then((data) => setProducts(data))
+    .catch((error) => console.error("Error fetching products:", error));
 
-    loadProducts()
   }, [])
   
   return (
