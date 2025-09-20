@@ -48,13 +48,13 @@ export default function ProductDetail() {
             <h1>{product.title}</h1>
             <div>
                 <p>{product.price}</p>
-                <p>{product.category?.name}</p>
+                {/* <p>{product.category?.name}</p> */}
             </div>
             <p>{product.description}</p>
 
             <div className="flex gap-3">
                 <button onClick={() => handleDelete(product.id)}>Delete</button>
-                <button>Edit</button>
+                <button onClick={() => navigate(`/products/${product.id}`)}>Edit</button>
             </div>
         </div>
     )
