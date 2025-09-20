@@ -1,9 +1,9 @@
-import type { Category } from "./Category";
+// import type { Category } from "./Category";
 export interface Product {
     id: number,
     title: string,
     price: number, 
-    category: Category, 
+    // category: Category, 
     description: string,
     images: string[],
 }
