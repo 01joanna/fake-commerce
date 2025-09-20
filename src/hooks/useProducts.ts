@@ -14,6 +14,7 @@ export function useProducts() {
 
     return {
         products,
+        setProducts,
         error
     }
 }
