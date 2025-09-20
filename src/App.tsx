@@ -1,6 +1,6 @@
 import type { Product } from './models/Product'
 import { fetchProducts } from './api/products'
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from './components/Card/Card';
 import Search from './components/Layout/Search';
 
