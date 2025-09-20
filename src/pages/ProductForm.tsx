@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchProductById, createProduct, updateProduct } from "../api/products";
-import type { Product } from "../models/Product";
 
 export default function ProductForm() {
     const { id } = useParams<{ id: string }>();
