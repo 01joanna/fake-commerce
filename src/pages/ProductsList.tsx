@@ -20,8 +20,8 @@ export default function ProductsList() {
             <h1>Todos los productos</h1>
             <div className="grid grid-cols-4 gap-4">
                 {products.map(product => (
-                    <div>
-                        <Card key={product.id} product={product} />
+                    <div key={product.id}>
+                        <Card product={product} />
                         <button
                         onClick={() => handleDelete(product.id)}
                         >Borrar</button>
