@@ -9,10 +9,10 @@ import ProductForm from '../pages/ProductForm'
 export default function AppRouter() {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/products" element={<ProductsList />} />
+            <Route path="/" element={<ProductsList />} />
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/products/new" element={<ProductForm />} />
             <Route path="/products/:id/edit" element={<ProductForm/>} />
