@@ -6,7 +6,6 @@ export default function ProductsList() {
 
     const { products, error, setProducts } = useProducts()
     if (error) return <div>Error: {error.message}</div>
-    console.log(products)
 
     async function handleDelete(id: number) {
         if (id) {

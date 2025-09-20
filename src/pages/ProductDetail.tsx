@@ -20,7 +20,7 @@ export default function ProductDetail() {
 
     async function handleDelete(id: number) {
         if (!product) return;
-        if (product) {
+        if (id) {
             try {
                 await deleteProduct(product.id);
                 alert("Producto borrado")
@@ -42,7 +42,7 @@ export default function ProductDetail() {
     return (
         <div>
             <img
-                src={product.images}
+                src={product.images[0]}
                 alt={`Imagen de ${product.title}`}
             />
             <h1>{product.title}</h1>
