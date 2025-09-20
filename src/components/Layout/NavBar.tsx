@@ -10,9 +10,10 @@ export default function NavBar({ value, onChange }: NavBarProps) {
         <header className="h-auto w-screen items-center flex flex-col">
             <nav>
                 <ul className="py-10 px-64 flex gap-40 justify-between">
-                    <li>Home</li>
-                    <li>Register</li>
-                    <li>Login</li>
+                    <a href="/">Home</a>
+                    <a href="/products">Productos</a>
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
                 </ul>
             </nav>
 
