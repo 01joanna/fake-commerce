@@ -5,7 +5,7 @@ import Footer from "./components/Layout/Footer";
 import { useState } from "react";
 
 function App() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
 
   return (
     <BrowserRouter>
