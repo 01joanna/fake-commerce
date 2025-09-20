@@ -5,7 +5,7 @@ type CardProps = {
     product: Product;
 }
 
-export function Card({ product }: CardProps) {
+export default function Card({ product }: CardProps) {
     return (
         <div className="border p-4 rounded shadow mb-4">
             {product.images.length > 0 && (
