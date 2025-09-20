@@ -10,7 +10,6 @@ export default function NavBar({ value, onChange }: NavBarProps) {
             <nav>
                 <ul className="py-10 px-64 flex gap-40 justify-between">
                     <a href="/">Home</a>
-                    <a href="/products">Productos</a>
                     <a href="/register">Register</a>
                     <a href="/login">Login</a>
                 </ul>
