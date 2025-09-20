@@ -14,7 +14,7 @@ export function Card({ product }: CardProps) {
                     alt={product.title}
                 />
             )}
-            <h2 className="">{product.title}</h2>
+            <h2 className="text-lg font-bold">{product.title}</h2>
             <p className="">{product.description}</p>
             <p className="font-semibold">Precio: ${product.price}</p>
             <p className="text-sm text-gray-500">Categoría: {product.category.name}</p>

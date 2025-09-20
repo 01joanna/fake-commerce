@@ -1,34 +1,24 @@
-import type { Product } from './models/Product'
-import { fetchProducts } from './api/products'
-import React, { useState, useEffect } from 'react';
-import { Card } from './components/Card/Card';
-import Search from './components/Layout/Search';
+import { BrowserRouter } from "react-router-dom";
+import { useState } from "react";
+import AppRouter from "./router/AppRouter";
+import NavBar from "./components/Layout/NavBar";
+import Footer from "./components/Layout/Footer";
+
+const [searchValue, setSearchValue] = useState<string>("");
 
 
 function App() {
-
-  const [products, setProducts] = useState<Product[]>([]);
-  const [search, setSearch] = useState<string>("")
-
-  useEffect(() => {
-    async function loadProducts(): Promise<void> {
-      const data: Product[] = await fetchProducts()
-      setProducts(data)
-    }
-
-    loadProducts()
-  }, [])
-  
   return (
-    <div>
-      <Search value={search} onChange={setSearch} />
-      <div className='grid grid-cols-4 grid-rows-4'>
-        {products.map((product: Product) => (
-          <Card key={product.id} product={product} />
-        ))}
+    <BrowserRouter>
+      <div className="flex flex-col min-h-screen">
+        <NavBar value={searchValue} onChange={setSearchValue}/>
+        <main className="flex-grow p-4">
+          <AppRouter />
+        </main>
+        <Footer />
       </div>
-    </div>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
